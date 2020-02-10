@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filmes</title>
+</head>
+
+<body>
+    <p>
+
+    </p>
+</body>
+
+</html>
+<script>
+    class Filme {
+        constructor(name, duration, description) {
+            this.name = name;
+            this.duration = duration;
+            this.description = description;
+        }
+
+        sendInformations() {
+            return {
+                name: this.name,
+                duration: this.duration,
+                description: this.description
+            }
+        }
+    }
+
+    let filmes = new Array();
+
+    filmes[0] = new Filme('Minha Mãe é uma Peça 3', '105 min', 'Dona Hermínia vai ter que se redescobrir e se reinventar porque seus filhos estão formando novas famílias. Essa supermãe vai ter que segurar a emoção para lidar com um novo cenário de vida: Marcelina está grávida e Juliano vai casar. Para completar, Carlos Alberto, seu ex-marido, que esteve sempre por perto, agora resolve ficar ainda mais próximo.');
+    filmes[1] = new Filme('Jumanji: Próxima Fase', '124 min', 'Em Jumanji: Próxima Fase, a turma está de volta mas o jogo mudou. Enquanto retornam à Jumanji para resgatar um de seus amigos, eles descobrem que nada é como eles esperavam que seria. Os jogadores devem desbravar áreas desconhecidas e inexploradas, desde o árido deserto até as montanhas nevadas, para poderem escapar do jogo mais perigoso do mundo.');
+    filmes[2] = new Filme('Os Órfãos', '94 min', 'Por mais de 100 anos, um conto de terror tem sido apresentado a diferentes públicos. Em 2020, o longa OS ÓRFÃOS, da DreamWorks Pictures, nos levará para uma misteriosa propriedade na zona rural de Maine, onde a recém-chegada babá Kate é encarregada de cuidar de dois órfãos perturbados, Flora e Miles. Rapidamente, ela descobre que tanto as crianças quanto a casa escondem segredos obscuros e as coisas podem não ser como aparentam ser. Inspirado no conto “A Volta do Parafuso”, de Henry James, o filme é dirigido por Floria Sigismondi (The Handmaid’s Tale e American Gods) e estrelado por Mackenzie Davis, Finn Wolfhard (Stranger Things e It – A Coisa), Brooklynn Prince (Projeto Flórida) e Joely Richardson.');
+    filmes[3] = new Filme('Adoráveis Mulheres', '135 min', 'As irmãs March enfrentam problemas crescentes como falta de dinheiro, tragédias familiares e rivalidades românticas na Massachusetts de meados do século 19. Jo luta por independência e, às vezes, entra em conflitos com a mãe e as irmãs Meg, Amy e Beth. Ela também lida com a rabugenta Tia March, o impulsivo vizinho Laurie e o bondoso professor Friedrich Bhaer.');
+    filmes[4] = new Filme('Um Lindo Dia Na Vizinhança', '107 min', `Fred Rogers (Tom Hanks) foi o criador de Mister Rogers' Neighborhood, um programa infantil de TV muito popular na década de 1960. Em 1998, Tom Junod (Matthew Rhys), até então um cínico jornalista, aceitou escrever o perfil de Rogers para a revista Esquire. Durante as entrevistas para a materia, Junod mudou não só sua visão em relação ao seu entrevistado como também sua visão de mundo, iniciando uma inspiradora amizade com o apresentador.`);
+    var span = document.querySelector('p');
+    span.innerHTML = JSON.stringify(filmes);
+    console.log(filmes);
+</script>
